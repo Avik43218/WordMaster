@@ -10,7 +10,7 @@ html {
 }
 
 .content {
-    flex: 1;    /* pushes footer down */
+    flex: 1;
 }
 
 body {
