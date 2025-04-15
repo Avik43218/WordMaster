@@ -29,7 +29,7 @@ Test your vocabulary, intuition, and spelling as you try to uncover the hidden w
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/WordMaster.git
+git clone https://github.com/Avik43218/WordMaster.git
 cd WordMaster
 ```
 ### 2. Install Dependencies
@@ -90,7 +90,7 @@ Coming soon on Render!
 
 ## 📃 License
 
-This project is open-source under the [MIT License]()
+This project is open-source under the [MIT License](https:/github.com/Avik43218/WordMaster/LICENSE)
 
 ---
 
