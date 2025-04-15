@@ -44,24 +44,7 @@ Then visit: http://127.0.0.1:5000 in your browser.
 
 ---
 
-## Folder Structure
-
-WordMaster/
-├── app.py
-├── backend.py
-├── filtered_words.dat
-├── requirements.txt
-├── Procfile
-├── /templates
-│   ├── start.html
-│   ├── setup.html
-│   └── game.html
-├── /static
-│   └── CSS & assets
-
----
-
-## Game Logic
+## 🧠 Game Logic
 
 - Players get one word per round.
 
@@ -75,7 +58,7 @@ WordMaster/
 
 ---
 
-## Security and Input Validation
+## 🛡️ Security and Input Validation
 
 - All inputs are sanitized and validated to prevent spam guesses like the full alphabet.
 
@@ -85,7 +68,7 @@ WordMaster/
 
 ---
 
-## Deployment Ready
+## 🌐 Deployment Ready
 
 This app is fully compatible with platforms like Render, Railway, and Heroku.
 
@@ -99,19 +82,19 @@ web: gunicorn app:app
 
 ---
 
-## Live Demo
+## ✨ Live Demo
 
 Coming soon on Render!
 
 ---
 
-## License
+## 📃 License
 
 This project is open-source under the [MIT License]()
 
 ---
 
-## Acknowledgements
+## 🙌 Acknowledgements
 
 - Flask Documentation
 - Natural Language Toolkit for word data & definitions
@@ -120,6 +103,6 @@ This project is open-source under the [MIT License]()
 
 ---
 
-**Built with passion by Avik43218**
-Level up your vocabulary - one guess at a time!
+**Built with passion by Avik43218**<br />
+Level up your vocabulary - one guess at a time!<br />
 Keep Learning :D
