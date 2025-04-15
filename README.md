@@ -90,7 +90,7 @@ Coming soon on Render!
 
 ## 📃 License
 
-This project is open-source under the [MIT License](https://github.com/Avik43218/WordMaster/LICENSE)
+This project is open-source under the [MIT License](./LICENSE/)
 
 ---
 
