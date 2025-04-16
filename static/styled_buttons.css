@@ -3,7 +3,7 @@ html, body {
 }
 
 .wrap {
-  height: 50%;
+  height: 75%;
   display: flex;
   align-items: center;
   justify-content: center;
