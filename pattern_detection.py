@@ -7,7 +7,7 @@ def is_sequential(guess):
     return True
 
 def is_keyboard_pattern(guess):
-    pattern = "qwertyuiopabcdefghijklmnopqrstuvwxyzaeiouasdfghjklzxcvbnmwasdazerty"
+    pattern = "abcdefghijklmnopqrstuvwxyzaeiouqwertyuiopasdfghjklzxcvbnmwasdazerty"
     if guess in pattern or guess[::-1] in pattern:
         return True
     return False
