@@ -37,7 +37,7 @@ def execute():
         session["attempts"] = int(difficulty)
         session["max_attempts"] = session["attempts"]
         session["round"] = 0
-        session["max_rounds"] = 10
+        session["max_rounds"] = 9
 
     guess = ""
     msg = ""
