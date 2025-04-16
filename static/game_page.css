@@ -36,6 +36,7 @@ p#points {
     font-size: 1.0625rem;
     text-align: justify;
     text-shadow: 0 0 0.375rem #00ff00;
+    margin-bottom: 1.875rem;
 }
 
 p#intro {
