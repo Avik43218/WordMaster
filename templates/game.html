@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title> Guess the Word Game </title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='game_page.css')}}" />
+    </head>
+    <body>
+
+        <h3 id="hnt"> Hint: {{hint}} </h3><br />
+
+        {% if message %}
+            <p id="dynamic_msg">{{message}}</p>
+        {% endif %}
+
+        <br />
+
+        <p id="intro"> Round: {{round}} </p><br />
+        <p id="intro"> Attempts Left: {{attempts}} </p>
+
+        <br />
+
+        <p id="intro">{{hidden_word}}&nbsp;&nbsp;&nbsp;&nbsp;({{length}} letters)</p>
+
+        <br />
+        <form action="{{ url_for('execute') }}" method="POST" class="guess-form">
+            <input type="text" id="guess" name="guess" placeholder="Your Guess" style="display: block;"/>
+            <button id="nxt" type="submit"> Check </button>
+        </form>
+        <p id="intro"> Your Score: {{session['score']}} </p>
+        <script>
+            let msg = "{{message}}"
+            if (msg == "Congratulations! You guessed the word :)") {
+                document.getElementById('nxt').innerText = "Next";
+                document.getElementById('guess').style.display = "none";
+                document.getElementById('dynamic_msg').style.color = "#98ff98";
+                document.getElementById('dynamic_msg').style.textShadow = "0 0 0.375rem #98ff98";
+            }
+
+            else if (msg == "Invalid input! Please try again!") {
+                document.getElementById('dynamic_msg').style.color = "#fffaa0";
+                document.getElementById('dynamic_msg').style.textShadow = "0 0 0.375rem #fffaa0";
+            }
+
+            else if (msg == "Wrong guess! Try again") {
+                document.getElementById('dynamic_msg').style.color = "#ff6f61";
+                document.getElementById('dynamic_msg').style.textShadow = "0 0 0.375rem #ff6f61";
+            }
+
+            else if (msg == "Hmm... That seems like a keyboard pattern - Nice Try") {
+                document.getElementById('dynamic_msg').style.color = "#fffaa0";
+                document.getElementById('dynamic_msg').style.textShadow = "0 0 0.375rem #fffaa0";
+            }
+
+            else if (msg == "Out of attempts! The word was: {{word}}") {
+                document.getElementById('nxt').innerText = "Next Round";
+                document.getElementById('guess').style.display = "none";
+                document.getElementById('dynamic_msg').style.color = "#fffaa0";
+                document.getElementById('dynamic_msg').style.textShadow = "0 0 0.375rem #fffaa0";
+            }
+
+            else if (msg == "You've completed all 10 rounds!") {
+                document.getElementById('nxt').innerText = "Next";
+                document.getElementById('hnt').innerText = "{{hint}}";
+                document.getElementById('guess').style.display = "none";
+
+                document.getElementById('nxt').addEventListener("click", function() {
+                    window.location.href = "/setup";
+                });
+
+                document.getElementById('dynamic_msg').style.color = "#98ff98";
+                document.getElementById('dynamic_msg').style.textShadow = "0 0 0.375rem #98ff98";
+            }
+        </script>
+    </body>
+</html>
